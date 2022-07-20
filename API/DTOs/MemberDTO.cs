@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-
 namespace API.DTOs
 {
     public class MemberDTO
@@ -20,6 +19,6 @@ namespace API.DTOs
         public string LookingFor { get; set; }
         public string Interests { get; set; }
         public string City { get; set; }
-        public ICollection<PhotoDTO> Photos { get; set; }
+        public ICollection<PhotoDTO> Photos { get; set; } = new List<PhotoDTO>();
     }
 }
