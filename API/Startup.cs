@@ -20,7 +20,6 @@ namespace API
             _config = config;
         }
 
-
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -52,7 +51,9 @@ namespace API
 
             app.UseRouting();
 
-            app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
+            app.UseCors(policy => policy.AllowAnyHeader()
+                                        .AllowAnyMethod()
+                                        .WithOrigins("https://localhost:4200"));
 
             app.UseAuthentication();
 

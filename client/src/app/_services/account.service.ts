@@ -5,7 +5,6 @@ import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import { User } from '../_models/user';
 
-
 @Injectable({
   providedIn: 'root',
 })
@@ -46,6 +45,6 @@ export class AccountService {
 
   logout() {
     localStorage.removeItem('user');
-    this.currentUserSource.next(null);
+    this.currentUserSource.next(undefined);
   }
 }

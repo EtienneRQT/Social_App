@@ -1,11 +1,12 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using API.Extensions;
 
 namespace API.Entities
 {
+    /// <summary>
+    /// Represents a user in the system. Contains profile information like username, password hash, date of birth etc. Also contains methods like GetAge() to calculate the user's age.
+    /// <summary>
     public class AppUser
     {
         public int Id { get; set; }
@@ -23,10 +24,9 @@ namespace API.Entities
         public string City { get; set; }
         public ICollection<Photo> Photos { get; set; }
 
-            public int GetAge(){
-        return DateOfBirth.CalculateAge();
+        public int GetAge()
+        {
+            return DateOfBirth.CalculateAge();
+        }
     }
-    }
-
-
 }
